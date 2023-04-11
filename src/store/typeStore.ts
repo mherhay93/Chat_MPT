@@ -1,0 +1,1 @@
+import { IInitialStateSocket } from './socketData/typeSocketData';export interface IStore {  dataSocket:IInitialStateSocket}

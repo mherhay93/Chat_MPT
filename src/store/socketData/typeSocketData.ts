@@ -1,0 +1,1 @@
+export interface IInitialStateSocket {  dataSocket:IDataSocket[]}export interface IDataSocket {  message:string,  id:string}

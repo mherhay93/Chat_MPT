@@ -1,0 +1,1 @@
+import { all, fork } from "redux-saga/effects"import socketDataSaga  from './socketDataSaga/socketDataSaga';export default function* rootSaga() {  yield all([fork(socketDataSaga)])}
