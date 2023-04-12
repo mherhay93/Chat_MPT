@@ -1,5 +1,12 @@
 {
   "Login": "Вход",
   "Registration": "Регистрация",
-  "send": "отправлять"
+  "send": "отправлять",
+  "Email": "Электронная почта",
+  "Password": "Пароль",
+  "confirmPassword": "Подтвердить пароль",
+  "Name": "Имя",
+  "surName": "Фамилия",
+  "registrationQuestion": "У вас уже есть аккаунт?",
+  "loginQuestion": "У вас нет учетной записи?"
 }

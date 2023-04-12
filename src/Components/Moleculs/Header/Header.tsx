@@ -3,12 +3,20 @@ import Modal from "../Modal/Modal";
 import {useState} from "react";
 import {useTranslation} from "react-i18next";
 import SelectLanguages from "../SelectLanguages/SelectLanguages";
+import FormLogin from "../Forms/FormLogin";
+import FormRegistration from "../Forms/FormRegistration";
 
 const Header = () => {
     const [isOpenModalLogin, setIsOpenModalLogin] = useState(false)
+    const [isOpenModalRegistration, setIsOpenModalRegistration] = useState(false)
     const {t} = useTranslation()
-    const handleOpen = () => {
-        setIsOpenModalLogin(true)
+    const handleOpenLogin = () => {
+        setIsOpenModalLogin(!isOpenModalLogin)
+    }
+
+
+    const handleOpenRegistration = () => {
+        setIsOpenModalRegistration(!isOpenModalRegistration)
     }
 
     return (
@@ -17,13 +25,28 @@ const Header = () => {
                 <span className={classes.logo}>Chat MPT</span>
                 <div className={classes.containerBody}>
                     <div className={classes.containerButtons}>
-                        <span onClick={handleOpen}>{t(`Login`)}</span>
-                        <span>{t('Registration')}</span>
+                        <span onClick={handleOpenLogin}>{t(`Login`)}</span>
+                        <span onClick={handleOpenRegistration}>{t('Registration')}</span>
                     </div>
                     <SelectLanguages/>
                 </div>
             </header>
-            <Modal isOpen={isOpenModalLogin} setIsOpen={setIsOpenModalLogin}/>
+            <Modal
+                children={
+                    <FormLogin
+                        handleCloseLoginModal={handleOpenLogin}
+                        handleOpenRegistrationModal={handleOpenRegistration}
+                    />}
+                isOpen={isOpenModalLogin}
+                setIsOpen={setIsOpenModalLogin}
+            />
+            <Modal
+                children={<FormRegistration
+                    handleCloseRegistrationModal={handleOpenRegistration}
+                    handleOpenLoginModal={handleOpenLogin}
+                />}
+                isOpen={isOpenModalRegistration}
+                setIsOpen={setIsOpenModalRegistration}/>
         </>
     )
 }

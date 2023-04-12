@@ -1,5 +1,12 @@
 {
   "Login": "Մուտք",
   "Registration": "Գրանցվել",
-  "send": "ուղարկել"
+  "send": "ուղարկել",
+  "Email": "Էլեկտրոնակին փոստ",
+  "Password": "Գաղտնաբառ",
+  "confirmPassword": "Հաստատել գաղտնաբառը",
+  "Name": "Անուն",
+  "surName": "Ազգանուն",
+  "registrationQuestion": "Արդեն գրանցված ե՞ք:",
+  "loginQuestion": "Հաշիվ չունե՞ս:"
 }

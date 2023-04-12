@@ -11,6 +11,8 @@
     --blueviolet: blueviolet;
     --lightBlueviolet: #e0c0ff;
     --darkBlueviolet: #a76ae7;
-    --textColorHeader: antiquewhite
+    --textColorHeader: antiquewhite;
+    --error:red;
+    --label: #5e5e5e
 }
 

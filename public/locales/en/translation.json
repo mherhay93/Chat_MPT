@@ -1,5 +1,12 @@
 {
   "Login": "Login",
   "Registration": "Registration",
-  "send": "send"
+  "send": "send",
+  "Email": "Email",
+  "Password": "Password",
+  "confirmPassword": "Confirm Password",
+  "Name": "Name",
+  "surName": "Surname",
+  "registrationQuestion": "Already have an account?",
+  "loginQuestion": "Don’t have an account?"
 }
