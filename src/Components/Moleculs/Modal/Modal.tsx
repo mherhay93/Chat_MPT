@@ -6,27 +6,26 @@ import cn from "classnames";
 
 interface IModal {
     children?: ReactNode | ReactNode[]
-    isOpen:boolean,
-    setIsOpen:Dispatch<SetStateAction<boolean>>
+    isOpen: boolean,
+    setIsOpen: Dispatch<SetStateAction<boolean>>
 }
 
 const Modal = ({children, isOpen, setIsOpen}: IModal) => {
 
     const handleClose = () => {
-      setIsOpen(false)
+        setIsOpen(false)
     }
 
     return (
-        <div className={cn(classes.container, {[classes.openModal]:isOpen})}>
-            <div className={classes.children}>
+        <div>
+            <div className={cn(classes.container, {[classes.openModal]: isOpen})}></div>
+            <div className={cn(classes.children, {[classes.openChildren]: isOpen})}>
                 <IoIosCloseCircleOutline
-                    size={30}
                     className={classes.closeIcon}
                     onClick={handleClose}
                 />
                 {children}
             </div>
-
         </div>
     )
 }

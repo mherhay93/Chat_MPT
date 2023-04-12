@@ -1,6 +1,16 @@
 @font-face {
     font-family: "RubikPixels";
-    src: local("RubikPixels"),
-    url("./assets/fonts/RubikPixels/RubikPixels-Regular.eot") format("opentype"), url("./assets/fonts/RubikPixels/RubikPixels-Regular.woff")
-    format("opentype"), url("./assets/fonts/RubikPixels/RubikPixels-Regular.woff2") format("woff");
+    src: url("./assets/fonts/RubikPixels/RubikPixels-Regular.eot");
+    src: url("./assets/fonts/RubikPixels/RubikPixels-Regular.eot?#iefix") format('embedded-opentype'),
+    url("./assets/fonts/RubikPixels/RubikPixels-Regular.eot") format("embedded-opentype"),
+    url("./assets/fonts/RubikPixels/RubikPixels-Regular.woff") format("woff"),
+    url("./assets/fonts/RubikPixels/RubikPixels-Regular.woff2") format("woff2");
 }
+
+#root {
+    --blueviolet: blueviolet;
+    --lightBlueviolet: #e0c0ff;
+    --darkBlueviolet: #a76ae7;
+    --textColorHeader: antiquewhite
+}
+

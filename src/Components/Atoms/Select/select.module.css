@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     cursor: pointer;
+    position: relative;
 }
 
 .containerHeader {
@@ -13,21 +14,27 @@
 }
 
 .header {
-    color: antiquewhite;
+    color: var(--textColorHeader);
 }
 
 .body {
-    display: flex;
-    flex-direction: column;
+    display: none;
     visibility: hidden;
     opacity: 0;
     transition: visibility .5s, opacity .3s;
 }
 
 .bodyVisibly {
+    position: absolute;
+    top: 80%;
+    display: flex;
+    flex-direction: column;
     visibility: visible;
     opacity: 1;
     transition: visibility .5s, opacity .3s;
+    background: var(--textColorHeader);
+    border: 1px solid var(--darkBlueviolet);
+    border-radius: 4px;
 }
 
 .item {
@@ -35,16 +42,27 @@
     border: none;
     cursor: pointer;
     font-size: 16px;
-    color: antiquewhite;
+    color: var(--blueviolet);
+    padding: 8px;
 }
 
 .icon {
     rotate: 0deg;
     transition: .5s ease-in-out;
-    color: antiquewhite;
+    color: var(--textColorHeader);
 }
 
 .iconSelected {
     rotate: 180deg;
     transition: .5s ease-in-out
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        font-size: 14px;
+    }
+
+    .item {
+        font-size: 14px;
+    }
 }

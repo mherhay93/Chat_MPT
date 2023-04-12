@@ -1,5 +1,5 @@
 .container {
-    background: blueviolet;
+    background: var(--blueviolet);
     padding: 10px 40px;
     display: flex;
     justify-content: space-between;
@@ -8,7 +8,7 @@
 
 .logo {
     font-family: RubikPixels, serif;
-    color: antiquewhite;
+    color: var(--textColorHeader);
     font-size: 34px;
     font-weight: bolder;
 }
@@ -26,11 +26,41 @@
 }
 
 .containerButtons span {
-    color: antiquewhite;
+    color: var(--textColorHeader);
     font-size: 18px;
     cursor: pointer;
 }
 
 .containerButtons span:nth-child(2) {
     margin-top: 4px;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 10px 20px;
+    }
+    .logo {
+        font-size: 28px;
+    }
+    .containerButtons {
+        margin-right: 10px;
+    }
+    .containerButtons span {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .container {
+        padding: 10px 10px;
+    }
+    .logo {
+        font-size: 24px;
+    }
+    .containerButtons {
+        margin-right: 10px;
+    }
+    .containerButtons span {
+        font-size: 14px;
+    }
 }
