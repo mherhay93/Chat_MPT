@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.containerHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.header {
+    color: antiquewhite;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .5s, opacity .3s;
+}
+
+.bodyVisibly {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility .5s, opacity .3s;
+}
+
+.item {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: antiquewhite;
+}
+
+.icon {
+    rotate: 0deg;
+    transition: .5s ease-in-out;
+    color: antiquewhite;
+}
+
+.iconSelected {
+    rotate: 180deg;
+    transition: .5s ease-in-out
+}

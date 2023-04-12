@@ -1,0 +1,6 @@
+@font-face {
+    font-family: "RubikPixels";
+    src: local("RubikPixels"),
+    url("./assets/fonts/RubikPixels/RubikPixels-Regular.eot") format("opentype"), url("./assets/fonts/RubikPixels/RubikPixels-Regular.woff")
+    format("opentype"), url("./assets/fonts/RubikPixels/RubikPixels-Regular.woff2") format("woff");
+}
