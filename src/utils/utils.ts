@@ -2,8 +2,8 @@ import {ILanguages, IValueLogin, IValueRegistration} from "./type";
 
 export const languages:ILanguages = {
     en: {nativeName: 'EN'},
-    ru: {nativeName: 'RU'},
-    am: {nativeName: 'AM'}
+    ru: {nativeName: 'РУ'},
+    am: {nativeName: 'ՀԱՅ'}
 }
 
 export const initialValueLogin:IValueLogin = { email: '', password: '' }

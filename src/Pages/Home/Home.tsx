@@ -1,1 +1,1 @@
-import classes from './home.module.css';import Layout from '../../Components/Moleculs/Layout/Layout';import Modal from "../../Components/Moleculs/Modal/Modal";const Home = () => {  return (    <Layout>      <div className={classes.container}>      </div>    </Layout>  );};export default Home;
+import Layout from '../../Components/Moleculs/Layout/index';import classes from './home.module.css';const Home = () => {  return (    <Layout>      <div className={classes.container}>      </div>    </Layout>  );};export default Home;

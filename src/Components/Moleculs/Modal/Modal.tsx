@@ -1,7 +1,7 @@
 import {Dispatch, ReactNode, SetStateAction} from "react";
-import classes from "./modal.module.css";
 import {IoIosCloseCircleOutline} from "react-icons/io"
 import cn from "classnames";
+import classes from "./modal.module.css";
 
 
 interface IModal {

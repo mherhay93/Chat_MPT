@@ -1,11 +1,11 @@
 import React, {ReactNode, useState} from "react";
-import classes from "./select.module.css";
 import {IoIosArrowDown} from "react-icons/io"
 import cn from "classnames";
+import classes from "./select.module.css";
 
 interface ISelect {
     data: string[],
-    handleClick?: (e: any) => void,
+    handleClick?: (e: string) => void,
     customSelectedValue?: string | ReactNode
 }
 

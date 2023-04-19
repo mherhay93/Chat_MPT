@@ -9,7 +9,7 @@ const SelectLanguages = () => {
     const [selectedLanguages, setSelectedLanguages] = useState(localStorage.getItem('i18nextLng') || 'en')
 
     const chooseLang = (lng: string) => {
-        i18n.changeLanguage(lng)
+        i18n.changeLanguage(lng).then(r => r)
         setSelectedLanguages(lng)
     }
 
