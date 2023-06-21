@@ -1,7 +1,7 @@
 ### `npm install`, when first use
 
 ## for start add .env file and use variables 
-REACT_APP_SOCKET_URL, for using your sever port
+REACT_APP_SOCKET_URL, for using your server port
 
 ### `npm start`
 
