@@ -1,22 +1,21 @@
 export interface ILanguages {
-    [key:string]:ILangItem,
-    // [ru:string]:ILangItem,
-    // en:ILangItem
+    [key:string] : ILangItem,
 }
 
-interface ILangItem {
-    nativeName:string
+export interface ILangItem {
+    nativeName : string,
+    value      : string
 }
 
 export interface IValueLogin {
-    email:string,
-    password:string
+    email    : string,
+    password : string
 }
 
 export interface IValueRegistration {
-    name:string,
-    surName:string,
-    email:string,
-    password:string,
-    confirmPassword:string
+    name            : string,
+    surName         : string,
+    email           : string,
+    password        : string,
+    confirmPassword : string
 }

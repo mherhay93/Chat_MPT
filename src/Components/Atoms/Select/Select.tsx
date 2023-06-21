@@ -1,18 +1,19 @@
 import React, {ReactNode, useState} from "react";
-import classes from "./select.module.css";
-import {IoIosArrowDown} from "react-icons/io"
 import cn from "classnames";
+import {IoIosArrowDown} from "react-icons/io"
+
+import {ILangItem} from "../../../utils/type";
+import classes from "./select.module.css";
 
 interface ISelect {
-    data: string[],
+    data: ILangItem[],
     handleClick?: (e: any) => void,
     customSelectedValue?: string | ReactNode
 }
 
 const Select = ({data, customSelectedValue, handleClick = () => undefined}: ISelect) => {
-    const [chooseData, setChooseData] = useState('EN')
+    const [chooseData, setChooseData] = useState('en-US')
     const [isOpen, setIsOpen] = useState(false)
-
     const chooseLang = (val: string) => {
         setChooseData(val)
     }
@@ -31,13 +32,13 @@ const Select = ({data, customSelectedValue, handleClick = () => undefined}: ISel
                 {data.map(item => (
                     <button
                         onClick={() => {
-                            handleClick(item)
-                            chooseLang(item)
+                            handleClick(item.value)
+                            chooseLang(item.value)
                             handleOpen()
                         }}
-                        key={item}
+                        key={item.nativeName}
                         className={classes.item}>
-                        {item}
+                        {item.nativeName}
                     </button>
                 ))}
 
