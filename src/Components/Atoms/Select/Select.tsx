@@ -14,6 +14,7 @@ interface ISelect {
 const Select = ({data, customSelectedValue, handleClick = () => undefined}: ISelect) => {
     const [chooseData, setChooseData] = useState('en-US')
     const [isOpen, setIsOpen] = useState(false)
+
     const chooseLang = (val: string) => {
         setChooseData(val)
     }

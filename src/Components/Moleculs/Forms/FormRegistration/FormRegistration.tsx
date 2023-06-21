@@ -1,17 +1,18 @@
 import {Formik, FormikErrors} from "formik";
-import {initialValueRegistration} from "../../../utils/utils";
-import {IValueLogin, IValueRegistration} from "../../../utils/type";
-import Input from "../../Atoms/Input/Input";
-import Button from "../../Atoms/Button/Button";
 import {useTranslation} from "react-i18next";
-import classes from "./formLogin.module.css";
+import {initialValueRegistration} from "../../../../utils/utils";
+import {IValueRegistration} from "../../../../utils/type";
+import Input from "../../../Atoms/Input/Input";
+import Button from "../../../Atoms/Button/Button";
+import classes from "../formLogin.module.css";
 
 interface IRegistrationForm {
     handleCloseRegistrationModal: () => void
     handleOpenLoginModal: () => void
+    postRegistrationData:(p:IValueRegistration) => void
 }
 
-const FormRegistration = ({handleCloseRegistrationModal, handleOpenLoginModal}: IRegistrationForm) => {
+const FormRegistration = ({handleCloseRegistrationModal, handleOpenLoginModal, postRegistrationData}: IRegistrationForm) => {
     const {t} = useTranslation()
     const handleClick = async () => {
        await handleCloseRegistrationModal()
@@ -48,7 +49,8 @@ const FormRegistration = ({handleCloseRegistrationModal, handleOpenLoginModal}: 
                     return errors;
                 }}
                 onSubmit={(values, {setSubmitting}) => {
-                    console.log('values ------->', values);
+                    postRegistrationData(values)
+                    setSubmitting(false)
                 }}
             >
                 {({

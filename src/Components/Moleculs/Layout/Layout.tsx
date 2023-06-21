@@ -1,15 +1,15 @@
-import {ReactNode, useState} from 'react';
+import {ReactNode} from 'react';
+import Chat from '../Chat/index';
+import Header from "../Header/index";
 import classes from './layout.module.css';
-import Chat from '../Chat/Chat';
-import Header from "../Header/Header";
 
 interface ILayout {
     children: ReactNode | ReactNode[]
 }
 
 const Layout = ({children}: ILayout) => {
-
-
+    
+    
     return (
         <>
             <Header/>

@@ -1,1 +1,1 @@
-import { IInitialStateSocket } from './socketData/typeSocketData';export interface IStore {  dataSocket:IInitialStateSocket}
+import { IInitialStateSocket } from './Slices/socketDataSlice/type';import {IAuthentication} from "./Slices/authenticationSlice/type";export interface IStore {  dataSocket:IInitialStateSocket,  authenticationData:IAuthentication}

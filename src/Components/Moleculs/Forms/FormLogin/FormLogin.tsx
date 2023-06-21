@@ -1,24 +1,24 @@
 import {Formik, FormikErrors} from "formik";
 import {useTranslation} from "react-i18next";
-import {initialValueLogin} from "../../../utils/utils";
-import Input from "../../Atoms/Input/Input";
-import Button from "../../Atoms/Button/Button";
-import classes from "./formLogin.module.css";
-import {IValueLogin} from "../../../utils/type";
+import {initialValueLogin} from "../../../../utils/utils";
+import {IValueLogin} from "../../../../utils/type";
+import Input from "../../../Atoms/Input/Input";
+import Button from "../../../Atoms/Button/Button";
+import classes from "../formLogin.module.css";
 
-interface ILogonForm {
-    handleCloseLoginModal:() => void
-    handleOpenRegistrationModal:() => void
+interface ILoginForm {
+    handleCloseLoginModal: () => void
+    handleOpenRegistrationModal: () => void
+    postLogin:(p:IValueLogin) => void
 }
 
-const FormLogin = ({handleCloseLoginModal, handleOpenRegistrationModal}:ILogonForm) => {
+const FormLogin = ({handleCloseLoginModal, handleOpenRegistrationModal, postLogin}: ILoginForm) => {
     const {t} = useTranslation()
-
     const handleClick = async () => {
-       await handleCloseLoginModal()
-       await handleOpenRegistrationModal()
+        await handleCloseLoginModal()
+        await handleOpenRegistrationModal()
     }
-
+    
     return (
         <div>
             <Formik
@@ -38,7 +38,8 @@ const FormLogin = ({handleCloseLoginModal, handleOpenRegistrationModal}:ILogonFo
                     return errors;
                 }}
                 onSubmit={(values, {setSubmitting}) => {
-                    console.log('values ------->', values);
+                    postLogin(values)
+                    setSubmitting(false)
                 }}
             >
                 {({
@@ -77,7 +78,7 @@ const FormLogin = ({handleCloseLoginModal, handleOpenRegistrationModal}:ILogonFo
                             {errors.password && touched.password &&
                                 <span className={classes.error}>{errors.password}</span>}
                         </label>
-
+                        
                         <Button disabled={isSubmitting} customStyle={classes.button} type={'submit'} text={t('Login')}/>
                     </form>
                 )}

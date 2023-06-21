@@ -1,10 +1,7 @@
-# Getting Started with Create React App
+### `npm install`, when first use
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
+## for start add .env file and use variables 
+REACT_APP_SOCKET_URL, for using your sever port
 
 ### `npm start`
 

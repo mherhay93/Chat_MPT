@@ -1,10 +1,10 @@
-import classes from "./header.module.css";
-import Modal from "../Modal/Modal";
 import {useState} from "react";
 import {useTranslation} from "react-i18next";
-import SelectLanguages from "../SelectLanguages/SelectLanguages";
+import Modal from "../Modal/index";
+import SelectLanguages from "../SelectLanguages/index";
 import FormLogin from "../Forms/FormLogin";
-import FormRegistration from "../Forms/FormRegistration";
+import FormRegistration from "../Forms/FormRegistration/index";
+import classes from "./header.module.css";
 
 const Header = () => {
     const [isOpenModalLogin, setIsOpenModalLogin] = useState(false)
