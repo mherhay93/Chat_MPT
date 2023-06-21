@@ -7,7 +7,6 @@ interface IRequest {
 }
 
 export const postRequest = ({path, data}:IRequest) => {
-    console.log('data----request----->', data);
   return axios.post(`${process.env.REACT_APP_SOCKET_URL}${path}`, data.data, {
         // params,
         // headers,

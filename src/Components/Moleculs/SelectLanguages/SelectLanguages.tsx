@@ -12,7 +12,6 @@ const SelectLanguages = () => {
         i18n.changeLanguage(lng).then(r => r)
         setSelectedLanguages(lng)
     }
-    console.log('i18n ------->', i18n.languages);
     return (
         <div className={classes.container}>
             <Select handleClick={chooseLang}

@@ -12,20 +12,16 @@ function* watcherSignUp() {
 }
 
 function* workerGetUser(data:AnyAction) {
-    console.log('data--------->', data)
     try {
         let response:ResponseType = yield call(postRequest, {path:'/auth/login', data})
-         console.log('response--------->', response)
     } catch (e) {
         console.log(new Error())
     }
 }
 
 function* workerSignUp(data:AnyAction) {
-    console.log('data--------->', data)
     try {
         let response:ResponseType = yield call(postRequest, {path:'/auth/signUp', data})
-        console.log('response--------->', response)
     } catch (e) {
         console.log(new Error())
     }
